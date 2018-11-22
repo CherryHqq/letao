@@ -31,11 +31,9 @@ $(function () {
             max: 6,
             message: '用户名长度必须在2到6之间'
           },
-          //正则校验
-          // regexp: {
-          //   regexp: /^[a-zA-Z0-9_\.]+$/,
-          //   message: '用户名由数字字母下划线和.组成'
-          // }
+          callback: {
+            message: '用户名不存在'
+          }
         }
       },
       password: {
@@ -50,11 +48,9 @@ $(function () {
             max: 12,
             message: '密码长度必须在6到12之间'
           },
-          //正则校验
-          // regexp: {
-          //   regexp: /^[a-zA-Z0-9_\.]+$/,
-          //   message: '用户名由数字字母下划线和.组成'
-          // }
+          callback: {
+            message: '密码错误'
+          }
         }
       },
     }
@@ -76,10 +72,16 @@ $(function () {
           location.href = "index.html";
         }
         if (info.error === 1000) {
-          alert(info.message)
+          // 用户名不存在
+          // 创建实例：$('#form').data("bootstrapValidator")
+          // updateStatus()  更新状态
+          // 参数1: 字段名称
+          // 参数2: 校验状态
+          // 参数3: 配置规则, 用于提示
+          $('#form').data("bootstrapValidator").updateStatus("username", "INVALID", "callback");
         }
         if (info.error === 1001) {
-          alert(info.message)
+          $('#form').data("bootstrapValidator").updateStatus("password", "INVALID", "callback");
         }
       }
     })
