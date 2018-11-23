@@ -18,6 +18,10 @@ a:active{
 .mt_20{
   margin-top: 20px;
 }
+/* 模态框 */
+.red{
+  color:#A94442;
+}
 .panel-title{
   height: 40px;
   line-height: 40px;
@@ -34,6 +38,10 @@ a:active{
   height: 100%;
   background-color: #222d32;
   z-index: 999;
+  transition: left 1s;
+}
+.lt-aside.hidemenu{
+  left: -180px;
 }
 /* 标题 */
 .lt-aside .brand{
@@ -82,7 +90,7 @@ a:active{
   margin-right: 5px;
 }
 .lt-aside .nav li .child {
-  /* display: none; */
+  display: none;
 }
 .lt-aside .nav li .child a {
   padding-left: 60px;
@@ -93,7 +101,7 @@ a:active{
   /* height: 2000px; */
   padding-left: 180px;
   padding-top: 50px;
-  /* transition: padding-left 1s; */
+  transition: padding-left 1s;
 }
 .lt_main.hidemenu {
   padding-left: 0px;
@@ -107,7 +115,7 @@ a:active{
   height: 50px;
   background-color: #3C8DBC;
   padding-left: 180px;
-  /* transition: padding-left 1s; */
+  transition: padding-left 1s;
 }
 .lt_topbar.hidemenu {
   padding-left: 0px;
