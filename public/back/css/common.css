@@ -137,6 +137,7 @@ a:active{
 .lt_content .echarts_right {
   width: 48%;
   height: 400px;
+  /* background-color: #069; */
 }
 
 /* 右边侧边栏 */
